@@ -1,0 +1,20 @@
+<head>
+  <title>astro-consistent-id-repo</title>
+</head>
+
+<body>
+  <h1>Reproduction of potential Astronomy bug with consistent ID generation</h1>
+  <h2>You can see additonal details about consisten ID generation <a href="https://atmospherejs.com/mdg/validated-method#id-generation-and-returnstubvalue">here</a></h2>
+
+  {{> test}}
+
+</body>
+
+<template name="test">
+  <p>Enter some text below and click one of the save buttons to insert a new record.</p>
+  <p>Check the browser and server console to see the Ids that are being generated.</p>
+  <p>Astronomy will produce a different Id on the client and server; Meteor will produce the same Id.</p>
+  <input id="js-text" type="text" placeholder="Some Text" />
+  <button id="js-astro-test">Click To Save with Astronomy</button>
+  <button id="js-meteor-test">Click To Insert with Meteor</button>
+</template>
